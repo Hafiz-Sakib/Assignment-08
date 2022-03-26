@@ -13,6 +13,11 @@
   margin-left: 50px;
   background-color: aquamarine;
 }
+.cart__headings {
+  margin-top: 30px;
+  padding-left: 50px;
+  /* text-align: center; */
+}
 
 /* Media Query */
 
@@ -23,5 +28,13 @@
   }
   #cart__button {
     margin-right: 10px;
+  }
+  .shop__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cart__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

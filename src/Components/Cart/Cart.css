@@ -1,7 +1,10 @@
 .cart {
-  position: sticky;
-  top: 0;
   margin-top: 30px;
   padding-left: 50px;
   /* text-align: center; */
+}
+.table__image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }

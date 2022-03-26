@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Poppins&display=swap");
+
+.Questuion__One {
+  font-family: "Hind Siliguri", sans-serif;
+  background-color: #e5ffec;
+  border-radius: 25px;
+  padding: 50px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.Questuion__One__heading {
+  margin-bottom: 30px;
+}
+.Questuion__two {
+  font-family: "Hind Siliguri", sans-serif;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
