@@ -1,0 +1,29 @@
+/* 1C2B35 */
+.navigation__bar {
+  height: 80px;
+  background-color: #449a47;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+.text-white {
+  font-weight: 900;
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 5s; /* don't forget to set a duration! */
+}
+
+.navigation__bar a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 20px;
+  margin-left: 36px;
+}
+.navigation__bar a:hover {
+  color: orangered;
+}
