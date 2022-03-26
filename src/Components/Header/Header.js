@@ -4,11 +4,15 @@ import "./Header.css";
 const Header = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between fixed-top"
+      className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between"
       id="nav__bar"
     >
       <div className="container">
-        <a className="navbar-brand fw-bolder fs-1" id="name" href="/name">
+        <a
+          className="navbar-brand fw-bolder fs-1 animate__animated animate__bounceInLeft"
+          id="name"
+          href="/name"
+        >
           <span className="text-primary">Camera </span>Mart
         </a>
         <button

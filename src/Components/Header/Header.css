@@ -1,14 +1,15 @@
 #name {
   font-weight: 900;
   font-size: 50px;
-}
-.text-white {
-  font-weight: 900;
+
   display: inline-block;
   margin: 0 0.5rem;
 
   animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 5s; /* don't forget to set a duration! */
+}
+.text-white {
+  font-weight: 900;
 }
 
 #navbarSupportedContent a {

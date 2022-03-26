@@ -16,7 +16,7 @@ const Products = (props) => {
           <p className="card-text">Brand:{brand}</p>
           <button
             type="button"
-            class="btn btn-primary mt-4 ms-4"
+            className="btn btn-primary mt-4 ms-4"
             id="cart__button"
             onClick={() => handleAddToCart(props.product)}
           >

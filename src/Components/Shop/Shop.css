@@ -7,6 +7,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 45px;
 }
+
+.cart__container {
+  margin-top: 100px;
+  margin-left: 50px;
+  background-color: aquamarine;
+}
+
+/* Media Query */
+
 @media screen and (max-width: 576px) {
   .product__container {
     display: grid;

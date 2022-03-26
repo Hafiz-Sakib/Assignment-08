@@ -30,7 +30,9 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart__container">
-        <Cart cart={cart}></Cart>
+        {cart.map((cart) => (
+          <Cart cart={cart}></Cart>
+        ))}
       </div>
     </div>
   );
