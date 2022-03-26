@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "./Product.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-const Product = (props) => {
-  const { name, brand, price, img } = props.product;
+const Products = (props) => {
+  const { name, img, price, brand } = props.product;
   const { handleAddToCart } = props;
-  console.log(name);
   return (
-    <div className="col col-sm-1 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-5">
-      <div className="card">
+    <div className="product">
+      <div>
         <img src={img} className="card-img-top" alt="..."></img>
         <div className="card-body">
           <h4 className="text-danger">{name}</h4>
@@ -17,6 +17,7 @@ const Product = (props) => {
           <button
             type="button"
             class="btn btn-primary mt-4 ms-4"
+            id="cart__button"
             onClick={() => handleAddToCart(props.product)}
           >
             Add to Cart{" "}
@@ -28,4 +29,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default Products;

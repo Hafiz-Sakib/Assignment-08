@@ -1,0 +1,27 @@
+.product {
+  margin-top: 100px;
+  margin-left: 50px;
+  border: 2px solid greenyellow;
+  border-radius: 8px;
+  transition: transform 0.2s; /* Animation */
+}
+.product img {
+  border-radius: 8px;
+  width: 100%;
+}
+.product:hover {
+  transform: scale(1.1);
+}
+.product__info {
+  margin: 0px 14px;
+}
+
+#name {
+  font-style: normal;
+  font-size: 21px;
+  margin-top: 7px;
+}
+
+#cart__button:hover {
+  background-color: #5eb861;
+}
