@@ -1,19 +1,16 @@
 import React from "react";
 
-const Product = () => {
+const Product = (props) => {
+  const { name, brand, price, img } = props.product;
+  console.log(name);
   return (
-    <div className="row row-cols-1 row-cols-md-3 g-4">
-      <div className="col">
-        <div className="card">
-          <img src="..." className="card-img-top" alt="..."></img>
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-          </div>
+    <div className="col col-sm-1 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-5">
+      <div className="card">
+        <img src={img} className="card-img-top" alt="..."></img>
+        <div className="card-body">
+          <h4 className="text-danger">{name}</h4>
+          <h6>Price:{price}</h6>
+          <p className="card-text">Brand:{brand}</p>
         </div>
       </div>
     </div>
