@@ -9,6 +9,10 @@
   border-radius: 8px;
   width: 100%;
 }
+#product__name {
+  animation: lightSpeedInLeft;
+  animation-duration: 5s;
+}
 .product:hover {
   transform: scale(1.1);
 }

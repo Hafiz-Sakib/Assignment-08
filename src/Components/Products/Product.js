@@ -11,7 +11,10 @@ const Products = (props) => {
       <div>
         <img src={img} className="card-img-top" alt="..."></img>
         <div className="card-body">
-          <h4 className="text-danger">{name}</h4>
+          <h4 className="text-danger" id="product__name">
+            {name}
+          </h4>
+          <br />
           <h6>Price:{price}</h6>
           <p className="card-text">Brand:{brand}</p>
           <button

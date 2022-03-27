@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Product from "../Products/Product";
 import "./Shop.css";
 import Cart from "../Cart/Cart";
-import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Shop = () => {
   const [cart, setCart] = useState([]);
@@ -16,9 +14,34 @@ const Shop = () => {
   }, []);
 
   const handleAddToCart = (product) => {
-    // console.log(product);
-    const newCart = [...cart, product];
-    setCart(newCart);
+    if (cart.indexOf(product) === -1) {
+      if (cart.length < 4) {
+        const newCart = [...cart, product];
+        setCart(newCart);
+      } else {
+        alert("Maximum 4 Product Can be Selected 🙁!");
+      }
+    } else {
+      alert("You Have Already Selected This Product 🤗!");
+    }
+  };
+
+  const saveCart = [];
+
+  const ChooseRandom = (cart) => {
+    console.log(cart);
+    const genarateNumber = Math.floor(Math.random() * cart.length);
+    saveCart.push(cart[genarateNumber]);
+    setCart(saveCart);
+  };
+
+  const RemoveAll = () => {
+    setCart([]);
+  };
+
+  const RemoveSingle = (id) => {
+    const RemoveItem = cart.filter((item) => item.id !== id);
+    setCart(RemoveItem);
   };
 
   return (
@@ -33,17 +56,13 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart__container">
-        <h1 className="cart__headings">
-          Order Summery{" "}
-          <FontAwesomeIcon
-            icon={faArrowAltCircleDown}
-            className="text-danger"
-          ></FontAwesomeIcon>
-        </h1>
-        <h4 className="cart__headings"> Selected Items: {cart.length}</h4>
-        {cart.map((cart) => (
-          <Cart key={cart.id} cart={cart}></Cart>
-        ))}
+        <Cart
+          key={cart.id}
+          carts={cart}
+          ChooseRandom={ChooseRandom}
+          RemoveAll={RemoveAll}
+          RemoveSingle={RemoveSingle}
+        ></Cart>
       </div>
     </div>
   );
