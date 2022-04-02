@@ -1,6 +1,7 @@
 .shop__container {
   display: grid;
   grid-template-columns: 4fr 2fr;
+  margin-bottom: 50px;
 }
 .product__container {
   display: grid;
